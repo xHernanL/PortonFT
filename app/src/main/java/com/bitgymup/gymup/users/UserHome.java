@@ -2,6 +2,7 @@ package com.bitgymup.gymup.users;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.PopupMenu;
 import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -18,6 +19,7 @@ import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -34,6 +36,8 @@ import com.android.volley.toolbox.Volley;
 import com.bitgymup.gymup.MainActivity;
 import com.bitgymup.gymup.R;
 import com.bitgymup.gymup.RecuperarPass;
+import com.bitgymup.gymup.admin.AdminDevContact;
+import com.bitgymup.gymup.admin.AdminDevelopers;
 import com.bitgymup.gymup.admin.AdminHome;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -54,7 +58,7 @@ import java.util.Map;
 import static com.bitgymup.gymup.admin.Variables.id_gym_n;
 import static com.bitgymup.gymup.admin.Variables.usuario_s;
 
-public class UserHome extends AppCompatActivity implements MapsFragment.MapsFragmentListener {
+public class UserHome extends AppCompatActivity  implements PopupMenu.OnMenuItemClickListener  {
     //Inicializar las variables
     private RequestQueue request;
     JsonObjectRequest jsonObjectRequest;
@@ -295,7 +299,25 @@ public class UserHome extends AppCompatActivity implements MapsFragment.MapsFrag
 
     //Cierre de las Notificaciones
 
+    public void ClickMenuOptionsUser(View v) {
+        PopupMenu popup = new PopupMenu(this, v);
+        popup.setOnMenuItemClickListener((PopupMenu.OnMenuItemClickListener) this);
+        popup.inflate(R.menu.menu_user_3);
+        popup.show();
+    }
 
+    public boolean onMenuItemClick(MenuItem item){
+        switch (item.getItemId()){
+            case R.id.acerca_de:
+                startActivity(new Intent(this, UserDevelopers.class));
+                return true;
+            /*case R.id.contacto:
+                startActivity(new Intent(this, AdminDevContact.class));
+                return true;*/
+            default:
+                return false;
+        }
+    }
 
     public void ClickMenu(View view){
         //Abrir drawer

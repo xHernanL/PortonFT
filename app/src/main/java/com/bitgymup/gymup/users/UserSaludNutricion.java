@@ -1,6 +1,7 @@
 package com.bitgymup.gymup.users;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.PopupMenu;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -14,6 +15,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.TextView;
@@ -37,7 +39,7 @@ import java.util.List;
 
 import static com.bitgymup.gymup.users.UserHome.salir;
 
-public class UserSaludNutricion extends AppCompatActivity {
+public class UserSaludNutricion extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
     //Inicializar las variables
     private RecyclerView recyclerViewSalud;
     private RecyclerViewAdapterSalud adapter;
@@ -149,6 +151,26 @@ public class UserSaludNutricion extends AppCompatActivity {
         if (drawerLayout.isDrawerOpen(GravityCompat.START)){
             //Cunando el drawer esta abierto, se CIERRA
             drawerLayout.closeDrawer(GravityCompat.START);
+        }
+    }
+
+    public void ClickMenuOptionsUser(View v) {
+        PopupMenu popup = new PopupMenu(this, v);
+        popup.setOnMenuItemClickListener((PopupMenu.OnMenuItemClickListener) this);
+        popup.inflate(R.menu.menu_user_3);
+        popup.show();
+    }
+
+    public boolean onMenuItemClick(MenuItem item){
+        switch (item.getItemId()){
+            case R.id.acerca_de:
+                startActivity(new Intent(this, UserDevelopers.class));
+                return true;
+            /*case R.id.contacto:
+                startActivity(new Intent(this, AdminDevContact.class));
+                return true;*/
+            default:
+                return false;
         }
     }
 

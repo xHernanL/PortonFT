@@ -7,58 +7,26 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.TextView;
 
+import com.bitgymup.gymup.MainActivity;
 import com.bitgymup.gymup.R;
+import com.bitgymup.gymup.admin.AdminDevContact;
+import com.bitgymup.gymup.admin.AdminDevelopers;
 
-import static com.bitgymup.gymup.users.UserHome.salir;
-
-public class UserPagos extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
-    //Inicializar las variables
+public class UserDevelopers extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener  {
     DrawerLayout drawerLayout;
-    private TextView gimnasio_nombre;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_pagos);
-        //Asignación de la variable
+        setContentView(R.layout.activity_user__developers);
+        //Asignamos la variable
         drawerLayout = findViewById(R.id.drawer_layout);
-        gimnasio_nombre  = (TextView) findViewById(R.id.gimnasio_nombre);
-        gimnasio_nombre.setText( getUserLogin("namegym"));
-
-    }
-    private String getUserLogin(String key) {
-        SharedPreferences sharedPref = getSharedPreferences("user_login", Context.MODE_PRIVATE);
-        String username = sharedPref.getString(key,"");
-        return username;
-    }
-
-    public void ClickMenu(View view){
-        //Abrir drawer
-        openDrawer(drawerLayout);
-        try
-        {
-            InputMethodManager im = (InputMethodManager)
-                    getSystemService(INPUT_METHOD_SERVICE);
-            im.hideSoftInputFromWindow(view.getWindowToken(), 0);
-        }
-        catch (Exception ex)
-        {
-            //Log.e(TAG, ex.toString());
-        }
-    }
-
-    public static void openDrawer(DrawerLayout drawerLayout) {
-        //Open drawer Layout, es un procedimiento público que no necesita ser instanciado, es visible en toda la APP.
-        drawerLayout.openDrawer(GravityCompat.START);
     }
 
     public void ClickMenuOptionsUser(View v) {
@@ -74,11 +42,21 @@ public class UserPagos extends AppCompatActivity implements PopupMenu.OnMenuItem
                 startActivity(new Intent(this, UserDevelopers.class));
                 return true;
             /*case R.id.contacto:
-                startActivity(new Intent(this, AdminDevContact.class));
+                startActivity(new Intent(this, UserDevContact.class));
                 return true;*/
             default:
                 return false;
         }
+    }
+
+    public void ClickMenu(View view){
+        //Abrir drawer
+        openDrawer(drawerLayout);
+    }
+
+    public static void openDrawer(DrawerLayout drawerLayout) {
+        //Open drawer Layout, es un procedimiento público que no necesita ser instanciado, es visible en toda la APP.
+        drawerLayout.openDrawer(GravityCompat.START);
     }
 
     public void ClickLogo(View view){
@@ -93,25 +71,25 @@ public class UserPagos extends AppCompatActivity implements PopupMenu.OnMenuItem
             drawerLayout.closeDrawer(GravityCompat.START);
         }
     }
-
     /*Inicio de los LINKS*/
+
     public void ClickHomeU(View view){
-        redirectActivity(this, UserHome.class);
+        recreate();
     }
     public void ClickMiNutri(View view){
         redirectActivity(this, UserSaludNutricion.class);
     }
     public void ClickAgendaU(View view){
-         redirectActivity(this, UserReservas.class);
+        redirectActivity(this, UserReservas.class);
     }
     public void ClickServiciosU(View view){
-         redirectActivity(this, UserServicios.class);
+        redirectActivity(this, UserServicios.class);
     }
     public void ClickMiSalud(View view){
         redirectActivity(this, UserSalud.class);
     }
     public void ClickPagosU(View view){
-      recreate();
+        redirectActivity(this, UserPagos.class);
     }
     public void ClickPromoU(View view){
         redirectActivity(this, UserPromo.class);
@@ -124,8 +102,41 @@ public class UserPagos extends AppCompatActivity implements PopupMenu.OnMenuItem
         salir(this);
     }
 
-
     /*Fin de los LINKS*/
+
+
+    public static void salir(Activity activity) {
+        //Se coloca el dialogo de alerta
+        AlertDialog.Builder builder = new AlertDialog.Builder(activity);
+        //Set Titulo
+        builder.setTitle(R.string.Salir);
+        //Set mensaje
+        builder.setMessage(R.string.estasseguro);
+
+        builder.setPositiveButton(R.string.Si, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                //finaliza la activity
+                //activity.finishAffinity();
+                //Salir de la APP
+                //System.exit(0);}
+                //Se puede usar de ambar formas con la Activity o usando un Context, pero con Activity se puede usar finish como NewTask.
+                Intent intent = new Intent(activity, MainActivity.class);
+                activity.startActivity(intent);
+                activity.finish();
+            }
+        });
+        //Respuesta Negativa
+        builder.setNegativeButton(R.string.No, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                //Salida del diálogo
+                dialog.dismiss();
+            }
+        });
+        //Mostrar dialogo
+        builder.show();
+    }
 
 
     public static void redirectActivity(Activity activity, Class aClass) {
@@ -144,6 +155,5 @@ public class UserPagos extends AppCompatActivity implements PopupMenu.OnMenuItem
         //Close drawer
         closeDrawer(drawerLayout);
     }
-
 
 }

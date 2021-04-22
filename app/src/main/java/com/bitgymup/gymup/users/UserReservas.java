@@ -1,6 +1,7 @@
 package com.bitgymup.gymup.users;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.PopupMenu;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -15,6 +16,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
@@ -59,7 +61,7 @@ import static com.bitgymup.gymup.admin.Variables.getUsuario_s;
 import static com.bitgymup.gymup.admin.Variables.setUsuario_s;
 import static com.bitgymup.gymup.users.UserHome.salir;
 
-public class UserReservas extends AppCompatActivity {
+public class UserReservas extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
 
     DrawerLayout drawerLayout;
     SharedPreferences userId1;
@@ -204,6 +206,26 @@ public class UserReservas extends AppCompatActivity {
     public static void openDrawer(DrawerLayout drawerLayout) {
         //Open drawer Layout, es un procedimiento público que no necesita ser instanciado, es visible en toda la APP.
         drawerLayout.openDrawer(GravityCompat.START);
+    }
+
+    public void ClickMenuOptionsUser(View v) {
+        PopupMenu popup = new PopupMenu(this, v);
+        popup.setOnMenuItemClickListener((PopupMenu.OnMenuItemClickListener) this);
+        popup.inflate(R.menu.menu_user_3);
+        popup.show();
+    }
+
+    public boolean onMenuItemClick(MenuItem item){
+        switch (item.getItemId()){
+            case R.id.acerca_de:
+                startActivity(new Intent(this, UserDevelopers.class));
+                return true;
+            /*case R.id.contacto:
+                startActivity(new Intent(this, AdminDevContact.class));
+                return true;*/
+            default:
+                return false;
+        }
     }
 
     public void ClickLogo(View view){

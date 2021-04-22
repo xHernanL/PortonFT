@@ -1,6 +1,7 @@
 package com.bitgymup.gymup.users;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.PopupMenu;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
@@ -13,6 +14,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -33,7 +35,7 @@ import org.json.JSONObject;
 
 import static com.bitgymup.gymup.users.UserHome.salir;
 
-public class UserUpdatePassword extends AppCompatActivity {
+public class UserUpdatePassword extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
 
     private Button btnSubmit;
     private String password1, password2, username;
@@ -145,6 +147,26 @@ public class UserUpdatePassword extends AppCompatActivity {
     public static void openDrawer(DrawerLayout drawerLayout) {
         //Open drawer Layout, es un procedimiento público que no necesita ser instanciado, es visible en toda la APP.
         drawerLayout.openDrawer(GravityCompat.START);
+    }
+
+    public void ClickMenuOptionsUser(View v) {
+        PopupMenu popup = new PopupMenu(this, v);
+        popup.setOnMenuItemClickListener((PopupMenu.OnMenuItemClickListener) this);
+        popup.inflate(R.menu.menu_user_3);
+        popup.show();
+    }
+
+    public boolean onMenuItemClick(MenuItem item){
+        switch (item.getItemId()){
+            case R.id.acerca_de:
+                startActivity(new Intent(this, UserDevelopers.class));
+                return true;
+            /*case R.id.contacto:
+                startActivity(new Intent(this, AdminDevContact.class));
+                return true;*/
+            default:
+                return false;
+        }
     }
 
     public void ClickLogo(View view){
