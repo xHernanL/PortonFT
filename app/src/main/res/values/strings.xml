@@ -18,7 +18,7 @@
 
     <!-- Screen -->
     <string name="sreen_name">GYM UP!</string>
-    <string name="screen_text">Tu gimnasio a un click!</string>
+    <string name="screen_text">Tu gimnasio a un clic!</string>
 
     <!-- Para AdminHealth-->
     <string name="health_titulo">Título</string>
@@ -163,7 +163,7 @@
     <string name="noPromotion">No hay promociones activas por el momento.</string>
     <string name="accesos_principales">Accesos Principales</string>
     <string name="pagos_pendientes">Pagos Pendientes</string>
-    <string name="acerca_de">AcercaDe</string>
+    <string name="acerca_de">Acerca de ZH</string>
     <string name="contacto">Contacto</string>
     <!-- End Main Activity -->
 

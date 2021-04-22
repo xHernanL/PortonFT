@@ -48,21 +48,21 @@
     <string name="userRegister">User Register</string>
     <string name="fullName">Full Name</string>
     <string name="document">Document</string>
-    <string name="cellphone">Cellphone Number</string>
+    <string name="cellphone">Mobile</string>
     <string name="address">Address</string>
     <string name="height">Height (cm)</string>
     <string name="weight">Weight</string>
     <string name="repeatPassword">Repeat Password</string>
     <string name="gender">Gender</string>
     <string name="loginUser">Log in</string>
-    <string name="username">Nombre de usuario</string>
+    <string name="username">Username</string>
     <string name="name">Name</string>
-    <string name="lastName">Last name</string>
+    <string name="lastName">Surname</string>
     <string name="city">City</string>
-    <string name="postalCode">Postal Code</string>
+    <string name="postalCode">ZIP Code</string>
     <string name="country">Country</string>
     <string name="phoneNumber">Phone Number</string>
-    <string name="userName">User Name</string>
+    <string name="userName">Username</string>
     <string name="status">Status</string>
     <string name="comments">Comments</string>
     <string name="birthday">Date of Birth</string>
@@ -157,11 +157,11 @@
     <string name="affiliatedGymList">Affiliated Gyms</string>
     <string name="readMore">Read more</string>
     <string name="seeAllA">See All</string>
-    <string name="noPromotion">No promotions right now.</string>
+    <string name="noPromotion">No promotions at this time.</string>
     <string name="accesos_principales">Quick Access</string>
     <string name="pagos_pendientes">Payment Due</string>
-    <string name="acerca_de">AcercaDe</string>
-    <string name="contacto">Contacto</string>
+    <string name="acerca_de">About Dev</string>
+    <string name="contacto">Contact</string>
     <!-- End Main Activity -->
 
     <!-- Start About Us-->
@@ -174,13 +174,13 @@
 
     <!-- Start Agenda-->
     <string name="mis_servicios">My services</string>
-    <string name="sobre_zona_software">Sobre Zona Software</string>
+    <string name="sobre_zona_software">About Zona Software</string>
     <string name="enviar_mensaje">Enviar Mensaje</string>
-    <string name="texto_2_developers">Disponemos de un grupo de profesionales de la industria TI, expertos en programación web y móvil, adaptables a todos las necesidades de nuestros clientes.</string>
-    <string name="texto_1_developers">Somos un grupo de desarrolladores de Software, abocados en la vanguardia tecnológica como principal objetivo.</string>
-    <string name="nombre_del_servicio">Nombre del servicio</string>
-    <string name="perfil_del_gimnasio">Perfil del Gimnasio</string>
-    <string name="detalle_del_servicio">Detalle del servicio</string>
+    <string name="texto_2_developers">We have a group of IT industry professionals, experts in web and mobile programming, adaptable to all the needs of our clients.</string>
+    <string name="texto_1_developers">We are a group of Software developers, focused on the technological forefront as their main objective.</string>
+    <string name="nombre_del_servicio">Service name</string>
+    <string name="perfil_del_gimnasio">Gym Profile</string>
+    <string name="detalle_del_servicio">Service detail</string>
     <string name="home">Home</string>
     <string name="logout">Logout</string>
     <string name="Usr_Registro_Ok">User successfully registered!</string>

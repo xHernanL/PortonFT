@@ -12,7 +12,6 @@
         android:paddingLeft="14dp"
         android:paddingRight="14dp">
 
-
         <!-- EditText con Material Design -->
         <TextView
             android:id="@+id/tvGymList"
@@ -148,6 +147,10 @@
             android:orientation="horizontal">
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="fill_parent"
+
+                android:background="@android:color/transparent"
+                app:boxBackgroundMode="none"
+                app:boxBackgroundColor="@null"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginRight="5dp"
