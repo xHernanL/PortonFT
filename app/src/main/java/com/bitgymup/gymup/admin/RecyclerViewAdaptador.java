@@ -96,8 +96,8 @@ public class RecyclerViewAdaptador extends RecyclerView.Adapter<RecyclerViewAdap
             btn_profile = (ImageView) itemView.findViewById(R.id.img_profile);
             search = (SearchView) itemView.findViewById(R.id.id_serch);
 
-
         }
+
         public void filter(final String strSearch ){
             Log.d("search","search");
         }
