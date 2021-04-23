@@ -90,8 +90,6 @@ public class AdminUsers extends AppCompatActivity implements PopupMenu.OnMenuIte
     }
 
 
-
-
     private String getUserLogin(String key) {
         SharedPreferences sharedPref = getSharedPreferences("user_login", Context.MODE_PRIVATE);
         String username = sharedPref.getString(key,"");
@@ -115,14 +113,11 @@ public class AdminUsers extends AppCompatActivity implements PopupMenu.OnMenuIte
                         String status = "";
                         if(status_int == 0){
                             status = "Inactivo";
-
                         }else{
                             status = "Activo";
                         }
 
-
-                        clients.add(new clients (id,profile, status));
-
+                        clients.add(new clients (id, profile, status));
 
                         recyclerViewClients =(RecyclerView)findViewById(R.id.recycler_clients);
                         recyclerViewClients.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
@@ -157,7 +152,6 @@ public class AdminUsers extends AppCompatActivity implements PopupMenu.OnMenuIte
         Log.d("msg",url);
         url = url.replace(" ","%20");
 
-
         jsonObjectRequest = new JsonObjectRequest(Request.Method.GET,url, null,
                 new Response.Listener<JSONObject>() {
                     @Override
@@ -173,7 +167,6 @@ public class AdminUsers extends AppCompatActivity implements PopupMenu.OnMenuIte
             }
         });
         request.add(jsonObjectRequest);
-
     }
 
 

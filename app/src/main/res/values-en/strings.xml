@@ -184,6 +184,7 @@
     <string name="home">Home</string>
     <string name="logout">Logout</string>
     <string name="Usr_Registro_Ok">User successfully registered!</string>
+    <string name="BuscarCliente">Search client</string>
     <!-- End Agenda -->
 
 </resources>

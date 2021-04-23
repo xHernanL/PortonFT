@@ -157,8 +157,8 @@ public class RecyclerViewAdaptador extends RecyclerView.Adapter<RecyclerViewAdap
         String flag;
         holder.username.setText(clientList.get(position).getUsername());
         holder.status.setText(clientList.get(position).getStatus());
-
         holder.id_user.setText(clientList.get(position).getId_user());
+
         flag = holder.status.getText().toString();
         if(flag.equals("Inactivo")){
             holder.btn_status.setEnabled(false);

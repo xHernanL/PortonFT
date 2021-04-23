@@ -22,11 +22,10 @@
             android:textStyle="bold"
             android:gravity="center"/>
 
-
         <SearchView
             android:id="@+id/id_serch"
             android:iconifiedByDefault="false"
-            android:queryHint="Buscar cliente"
+            android:queryHint="@string/BuscarCliente"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 

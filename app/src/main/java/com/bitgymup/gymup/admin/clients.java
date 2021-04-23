@@ -1,7 +1,7 @@
 package com.bitgymup.gymup.admin;
 
 public class clients {
-    private String id_user,username, status;
+    private String id_user, username, status;
 
     public clients() {
     }
