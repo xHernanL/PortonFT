@@ -147,7 +147,7 @@ public class AdminUsers extends AppCompatActivity implements PopupMenu.OnMenuIte
     }
 
     public static void cargarWebService(String id, TextView status) {
-        Log.d("msg","Paso 1");
+        //Log.d("msg","Paso 1");
         String url = "http://gymup.zonahosting.net/gymphp/BloqueoClientsWS.php?id="+id;
         Log.d("msg",url);
         url = url.replace(" ","%20");
@@ -206,41 +206,32 @@ public class AdminUsers extends AppCompatActivity implements PopupMenu.OnMenuIte
     }
 
     public void ClickLogo(View view){
-        //Close drawer
         AdminHome.closeDrawer(drawerLayout);
     }
 
     /*Inicio de los enlaces*/
     public void ClickHome(View view){
-        //Redirección de la activity to Home
         redirectActivity(this,AdminHome.class);
     }
     public void ClickAgenda(View view){
-        //Redirección de la activity a Agenda
         redirectActivity(this,AdminAgenda.class);
     }
     public void ClickNews(View view){
-        //Redirección de la activity a AboutUs
         redirectActivity(this,AdminNews.class);
     }
     public void ClickPromo(View view){
-        //Redirección de la activity a AboutUs
         redirectActivity(this,AdminOffers.class);
     }
     public void ClickServicios(View view){
-        //Redirección de la activity a AboutUs
         redirectActivity(this,AdminServices.class);
     }
     public void ClickMyProfile(View view){
-        //Redirección de la activity a AboutUs
         redirectActivity(this,AdminProfile.class);
     }
     public void ClickClientes(View view){
-        //recreamos la actividad!
         recreate();
     }
     public void CAbout(View view){
-        //Redirección de la activity to Home
         redirectActivity(this,AdminAboutUs.class);
     }
     /*Fin de los enlaces generales*/
@@ -264,6 +255,5 @@ public class AdminUsers extends AppCompatActivity implements PopupMenu.OnMenuIte
         //Close drawer
         AdminHome.closeDrawer(drawerLayout);
     }
-
 
 }
