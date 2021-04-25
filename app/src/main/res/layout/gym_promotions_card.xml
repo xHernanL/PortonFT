@@ -9,7 +9,6 @@
     app:cardCornerRadius="8dp"
     app:cardUseCompatPadding="true"
     app:cardElevation="9dp"
-
     >
 
     <LinearLayout

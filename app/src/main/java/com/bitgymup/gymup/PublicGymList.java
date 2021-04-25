@@ -99,7 +99,6 @@ public class PublicGymList extends AppCompatActivity implements Response.Listene
                                 newActivity.putExtra("gymId"  , item.getId()  );
                                 newActivity.putExtra("gymName", item.getName());
                                 startActivity(newActivity);
-
                             }
                         });
                         RecyclerView reciclerView = findViewById(R.id.recicler);

@@ -65,8 +65,6 @@
         <activity android:name=".admin.AdminNewSchedule" />
         <activity android:name=".users.UserRegister" />
         <activity android:name=".users.UserProfile" />
-        <activity android:name=".Nutrition" />
-        <activity android:name=".Contact" />
         <activity android:name=".users.Services" />
         <activity android:name=".AboutUs" />
         <activity android:name=".GymList" />

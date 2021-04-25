@@ -37,7 +37,7 @@
                 android:textSize="28sp"
                  android:layout_marginRight="100dp"
                 android:fontFamily="@font/archiblack"
-                android:textColor="#0F174C"
+                android:textColor="#111847"
                 android:gravity="center"/>
             </LinearLayout>
 

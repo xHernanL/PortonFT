@@ -15,8 +15,6 @@ import android.view.View;
 
 import com.bitgymup.gymup.MainActivity;
 import com.bitgymup.gymup.R;
-import com.bitgymup.gymup.admin.AdminDevContact;
-import com.bitgymup.gymup.admin.AdminDevelopers;
 
 public class UserDevelopers extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener  {
     DrawerLayout drawerLayout;
@@ -24,7 +22,7 @@ public class UserDevelopers extends AppCompatActivity implements PopupMenu.OnMen
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user__developers);
+        setContentView(R.layout.activity_user_developers);
         //Asignamos la variable
         drawerLayout = findViewById(R.id.drawer_layout);
     }
