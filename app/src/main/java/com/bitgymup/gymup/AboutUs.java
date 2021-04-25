@@ -1,12 +1,15 @@
 package com.bitgymup.gymup;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -17,6 +20,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
+import com.bitgymup.gymup.admin.AdminHome;
 import com.bitgymup.gymup.users.MapsFragment;
 import com.bitgymup.gymup.users.UserRegister;
 import com.google.android.gms.maps.GoogleMap;
@@ -33,12 +37,22 @@ public class AboutUs extends AppCompatActivity implements OnMapReadyCallback {
 
     private String gymId, gymName;
     private TextView tvAboutUsGymName, tvAboutUs, tvAboutUsVision, tvAboutUsMission, tvAboutUsPhone, tvAboutUsLocation, tvAboutUsEmail, tvAboutUsMobile, tvAboutUsAddress, tvAboutUsCountry, tvAboutUsCity;
-    private ImageView ivAboutUsLocation;
+    private ImageView ivAboutUsLocation, btn_Back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_us);
+
+        btn_Back = findViewById(R.id.btn_Back);
+        btn_Back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AboutUs.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
         gymId   = getIntent().getStringExtra("gymId");
         gymName = getIntent().getStringExtra("gymName");
@@ -147,6 +161,7 @@ public class AboutUs extends AppCompatActivity implements OnMapReadyCallback {
         requestQueue.add(jsonArrayRequest);
 
     }
+
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
