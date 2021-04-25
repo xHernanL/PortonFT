@@ -17,7 +17,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
-
     private RelativeLayout btnNutritionAndHealth, btnAllGymList, btnHomePromotions;
 
     @Override
