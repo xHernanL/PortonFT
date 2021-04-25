@@ -51,6 +51,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
                     android:layout_margin="25dp"
+                    android:id="@+id/btnAllGymList"
                     android:background="@drawable/main_gimnasios">
 
                     <TextView
@@ -63,7 +64,6 @@
                         android:textSize="20dp" />
 
                     <Button
-                        android:id="@+id/btnAllGymList"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"
@@ -85,6 +85,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_margin="20dp"
+                android:id="@+id/btnNutritionAndHealth"
                 android:background="@drawable/main_saludynutricion">
 
                 <ImageView
@@ -103,8 +104,8 @@
                     android:textColor="#ffffff"
                     android:textSize="20dp" />
 
-                <Button
-                    android:id="@+id/btnNutritionAndHealth"
+                <TextView
+
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
@@ -121,6 +122,7 @@
                 android:layout_height="190dp">
 
                 <RelativeLayout
+                    android:id="@+id/btnHomePromotions"
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
                     android:layout_margin="20dp"
@@ -137,7 +139,6 @@
                         android:textSize="20dp" />
 
                     <Button
-                        android:id="@+id/btnHomePromotions"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"

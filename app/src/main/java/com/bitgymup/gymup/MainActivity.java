@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.bitgymup.gymup.users.UserHome;
@@ -16,7 +17,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
-    private Button btnAllGymList, btnNutritionAndHealth, btnHomePromotions;
+
+    private RelativeLayout btnNutritionAndHealth, btnAllGymList, btnHomePromotions;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
