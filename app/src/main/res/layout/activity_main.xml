@@ -30,15 +30,16 @@
                 android:layout_height="50dp"
                 android:layout_marginStart="80dp"
                 android:src="@drawable/main_logo"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/sreen_name"
-                android:textSize="28sp"
-                 android:layout_marginRight="100dp"
-                android:fontFamily="@font/archiblack"
-                android:textColor="#111847"
-                android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="199dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="100dp"
+                    android:fontFamily="@font/archiblack"
+                    android:gravity="center"
+                    android:text="@string/sreen_name"
+                    android:textColor="#111847"
+                    android:textSize="28sp" />
             </LinearLayout>
 
 
