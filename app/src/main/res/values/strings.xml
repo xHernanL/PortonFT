@@ -188,6 +188,9 @@
     <string name="logout">Cerrar sesión</string>
     <string name="Usr_Registro_Ok">Usuario registrado correctamente.</string>
     <string name="BuscarCliente">Buscar cliente</string>
+    <string name="agua">Agua</string>
+    <string name="vasos_de_agua">Vasos de Agua</string>
+    <string name="peso_kg">Peso (Kg)</string>
     <!-- End Agenda -->
 
 

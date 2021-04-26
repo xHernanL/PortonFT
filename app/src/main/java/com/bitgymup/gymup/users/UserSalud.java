@@ -15,6 +15,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.bitgymup.gymup.R;
@@ -25,16 +26,19 @@ public class UserSalud extends AppCompatActivity implements PopupMenu.OnMenuItem
     //Inicializar las variables
     DrawerLayout drawerLayout;
     private TextView gimnasio_nombre;
+    private Button btn_agua, btn_peso;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_salud);
         //Asignación de la variable
         drawerLayout = findViewById(R.id.drawer_layout);
+        btn_peso = findViewById(R.id.btn_RegistroPeso);
+        btn_agua = findViewById(R.id.btn_RegistroAgua);
         gimnasio_nombre  = (TextView) findViewById(R.id.gimnasio_nombre);
         gimnasio_nombre.setText( getUserLogin("namegym"));
 
-    }
+    }//Fin onCreate
 
     private String getUserLogin(String key) {
         SharedPreferences sharedPref = getSharedPreferences("user_login", Context.MODE_PRIVATE);

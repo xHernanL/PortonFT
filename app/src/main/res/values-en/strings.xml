@@ -185,6 +185,9 @@
     <string name="logout">Logout</string>
     <string name="Usr_Registro_Ok">User successfully registered!</string>
     <string name="BuscarCliente">Search client</string>
+    <string name="agua">Water</string>
+    <string name="vasos_de_agua">Glasses of water</string>
+    <string name="peso_kg">Weight (Kg)</string>
     <!-- End Agenda -->
 
 </resources>
