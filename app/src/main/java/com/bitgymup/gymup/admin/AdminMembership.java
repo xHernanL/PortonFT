@@ -16,7 +16,7 @@ import com.bitgymup.gymup.R;
 
 import static com.bitgymup.gymup.admin.AdminHome.redirectActivity;
 
-public class AdminMembership extends AppCompatActivity {
+public class AdminMembership extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener{
     private static final String TAG = "AdminMembership";
     DrawerLayout drawerLayout;
 
@@ -25,6 +25,7 @@ public class AdminMembership extends AppCompatActivity {
         setContentView(R.layout.activity_admin_membership);
         drawerLayout = findViewById(R.id.drawer_layout);
     }
+
 
     /*INICIO DE TODO EL NAVIGATION DRAWER */
     public void ClickMenu(View view){

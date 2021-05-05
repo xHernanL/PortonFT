@@ -16,7 +16,7 @@ import com.bitgymup.gymup.R;
 
 import static com.bitgymup.gymup.admin.AdminHome.redirectActivity;
 
-public class AdminInvoices extends AppCompatActivity {
+public class AdminInvoices extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener{
     private static final String TAG = "AdminInvoices";
     DrawerLayout drawerLayout;
 
