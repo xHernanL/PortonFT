@@ -73,9 +73,9 @@ public class LogIn extends AppCompatActivity {
         textViewForgotPass = findViewById(R.id.olvidopass);
         progressBar = findViewById(R.id.progress);
         request = Volley.newRequestQueue(this);
-        Toolbar miActionbar = (Toolbar) findViewById(R.id.miActionbarBack);
-        setSupportActionBar(miActionbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //Toolbar miActionbar = (Toolbar) findViewById(R.id.miActionbarBack);
+        //setSupportActionBar(miActionbar);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
         /*Se le asigna un evento en el caso que este registrado puede ser redirigido al Registro*/
@@ -263,7 +263,7 @@ public class LogIn extends AppCompatActivity {
                 });
     }
 
-    @Override
+   /* @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
@@ -272,7 +272,7 @@ public class LogIn extends AppCompatActivity {
                 break;
         }
         return true;
-    }
+    }*/
     private void cargarWSgimnasio(String username) {
         String url = "http://gymup.zonahosting.net/gymphp/getGimnasioWS.php?username=" +username;
         Log.d("username", username);
