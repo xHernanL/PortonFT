@@ -50,29 +50,18 @@ public class AdminAddUser extends AppCompatActivity implements PopupMenu.OnMenuI
         //Redirección de la activity Home
         redirectActivity(this,AdminHome.class);
     }
-    public void ClickAgenda(View view){
-        //Redirecciona la activity Agenda
-        redirectActivity(this, AdminAgenda.class);
-    }
+
     public void ClickNews(View view){
         //Redirección de la activity News
         redirectActivity(this,AdminNews.class);
     }
-    public void ClickPromo(View view){
-        //Redirección de la activity a Offers
-        redirectActivity(this,AdminOffers.class);
+    public void ClickInvoices(View view){
+        //Redirección de la activity a Facturas
+        redirectActivity(this,AdminInvoices.class);
     }
-    public void ClickServicios(View view){
-        //Redirección de la activity a Services
-        redirectActivity(this,AdminServices.class);
-    }
-    public void CAbout(View view){
-        //Redirección de la activity About
-        redirectActivity(this,AdminAboutUs.class);
-    }
-    public void ClickMyProfile(View view){
-        //Redirección de la activity a Profile
-        redirectActivity(this,AdminProfile.class);
+    public void ClickMembership(View view){
+        //Redirección de la activity a Membresia
+        redirectActivity(this,AdminMembership.class);
     }
     public void ClickClientes(View view){
         //Redirección de la activity a Users

@@ -163,33 +163,21 @@ public class AdminUserDetail extends AppCompatActivity implements PopupMenu.OnMe
         //Redirección de la activity to Home
         redirectActivity(this,AdminHome.class);
     }
-    public void ClickAgenda(View view){
-        //Redirección de la activity a Agenda
-        redirectActivity(this,AdminAgenda.class);
-    }
     public void ClickNews(View view){
         //Redirección de la activity a AboutUs
         redirectActivity(this,AdminNews.class);
     }
-    public void ClickPromo(View view){
-        //Redirección de la activity a AboutUs
-        redirectActivity(this,AdminOffers.class);
+    public void ClickInvoices(View view){
+        //Redirección de la activity a Facturas
+        redirectActivity(this,AdminInvoices.class);
     }
-    public void ClickServicios(View view){
-        //Redirección de la activity a AboutUs
-        redirectActivity(this,AdminServices.class);
-    }
-    public void ClickMyProfile(View view){
-        //Redirección de la activity a AboutUs
-        redirectActivity(this,AdminProfile.class);
+    public void ClickMembership(View view){
+        //Redirección de la activity a Membresia
+        redirectActivity(this,AdminMembership.class);
     }
     public void ClickClientes(View view){
         //recreamos la actividad!
         redirectActivity(this,AdminUsers.class);
-    }
-    public void CAbout(View view){
-        //Redirección de la activity to Home
-        redirectActivity(this,AdminAboutUs.class);
     }
     /*Fin de los enlaces generales*/
 

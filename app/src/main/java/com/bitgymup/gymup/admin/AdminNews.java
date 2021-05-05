@@ -221,10 +221,7 @@ public class AdminNews extends AppCompatActivity implements PopupMenu.OnMenuItem
         //Redirecciona la activity a Home
         redirectActivity(this, AdminHome.class);
     }
-    public void ClickAgenda(View view){
-        //Redirección de la activity Clientes
-        redirectActivity(this,AdminAgenda.class);
-    }
+
     public void ClickClientes(View view){
         //Redirección de la activity a Notificaciones
         redirectActivity(this,AdminUsers.class);
@@ -233,21 +230,13 @@ public class AdminNews extends AppCompatActivity implements PopupMenu.OnMenuItem
         //Recrea la actividad
         recreate();
     }
-    public void ClickPromo(View view){
-        //Redirección de la activity a Promociones
-        redirectActivity(this,AdminOffers.class);
+    public void ClickInvoices(View view){
+        //Redirección de la activity a Facturas
+        redirectActivity(this,AdminInvoices.class);
     }
-    public void ClickServicios(View view){
-        //Redirección de la activity a Servicios
-        redirectActivity(this,AdminServices.class);
-    }
-    public void CAbout(View view){
-        //Redirección de la activity a Nosotros
-        redirectActivity(this,AdminAboutUs.class);
-    }
-    public void ClickHealth(View view){
-        //Redirección de la activity a Salud y nutrición
-        redirectActivity(this,AdminHealth.class);
+    public void ClickMembership(View view){
+        //Redirección de la activity a Membresia
+        redirectActivity(this,AdminMembership.class);
     }
     public void ClickMyProfile(View view){
         //Redirección de la activity a Mi Perfil

@@ -12,7 +12,6 @@
     <include android:id="@+id/miActionbarBack"
         layout="@layout/actionbar_back"></include>
 
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
@@ -21,7 +20,7 @@
         android:scaleType="centerInside"
         android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/miActionbarBack"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo_gymup" />
 
     <TextView

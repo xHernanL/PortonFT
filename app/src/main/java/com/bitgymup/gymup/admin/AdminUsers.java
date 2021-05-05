@@ -213,26 +213,13 @@ public class AdminUsers extends AppCompatActivity implements PopupMenu.OnMenuIte
     public void ClickHome(View view){
         redirectActivity(this,AdminHome.class);
     }
-    public void ClickAgenda(View view){
-        redirectActivity(this,AdminAgenda.class);
-    }
     public void ClickNews(View view){
         redirectActivity(this,AdminNews.class);
     }
-    public void ClickPromo(View view){
-        redirectActivity(this,AdminOffers.class);
-    }
-    public void ClickServicios(View view){
-        redirectActivity(this,AdminServices.class);
-    }
-    public void ClickMyProfile(View view){
-        redirectActivity(this,AdminProfile.class);
-    }
+    public void ClickInvoices(View view){redirectActivity(this,AdminInvoices.class); }
+    public void ClickMembership(View view){redirectActivity(this,AdminMembership.class); }
     public void ClickClientes(View view){
         recreate();
-    }
-    public void CAbout(View view){
-        redirectActivity(this,AdminAboutUs.class);
     }
     /*Fin de los enlaces generales*/
 

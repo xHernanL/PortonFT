@@ -18,11 +18,11 @@
                 android:layout_height="120dp"
                 android:layout_margin="16dp"
                 android:onClick="ClickLogo"
-                android:src="@drawable/logo_admin"/>
+                android:src="@drawable/ptnft"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Tu Gimnasio Virtual"
+                android:text="El Portón FT"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:textAlignment="center"
@@ -61,25 +61,6 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:onClick="ClickAgenda">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/agenda"
-                    android:padding="12dp"
-                    android:layout_marginStart="16dp"/>
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="48dp"
-                    android:src="@drawable/ic_admin_agenda"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
                 android:onClick="ClickClientes">
                 <TextView
                     android:layout_width="0dp"
@@ -113,44 +94,25 @@
                     android:layout_marginEnd="48dp"
                     android:src="@drawable/ic_admin_push"/>
             </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:onClick="ClickPromo">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/promotion"
-                    android:padding="12dp"
-                    android:layout_marginStart="16dp"/>
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="48dp"
-                    android:src="@drawable/ic_admin_promo"/>
-            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:onClick="ClickServicios">
+                android:onClick="ClickInvoices">
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/servicios"
+                    android:text="Facturas"
                     android:padding="12dp"
                     android:layout_marginStart="16dp"/>
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="48dp"
-                    android:src="@drawable/ic_admin_services"/>
+                    android:src="@drawable/ic_facturas"/>
 
             </LinearLayout>
 
@@ -159,62 +121,20 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:onClick="CAbout">
+                android:onClick="ClickMembership">
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/aboutUs"
+                    android:text="Membresía"
                     android:padding="12dp"
                     android:layout_marginStart="16dp"/>
+
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="48dp"
-                    android:src="@drawable/ic_admin_aboutus"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:onClick="ClickHealth">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/nutrition"
-                    android:padding="12dp"
-                    android:layout_marginStart="16dp"/>
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="48dp"
-                    android:src="@drawable/ic_nutrition"/>
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:onClick="ClickMyProfile">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/mi_perfil"
-                    android:padding="12dp"
-                    android:layout_marginStart="16dp"/>
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="48dp"
-                    android:src="@drawable/ic_admin_profile"/>
+                    android:src="@drawable/ic_gymptn"/>
 
             </LinearLayout>
 

@@ -34,6 +34,7 @@ import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.bitgymup.gymup.LogIn;
 import com.bitgymup.gymup.MainActivity;
 import com.bitgymup.gymup.R;
 import com.bitgymup.gymup.users.UserHome;
@@ -109,14 +110,6 @@ public class AdminHome extends AppCompatActivity implements PopupMenu.OnMenuItem
         getToken();
         subscribeToTopic();
 
-        cardView1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), AdminAgenda.class);
-                startActivity(intent);
-                finish();
-            }
-        });
         cardView2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -133,14 +126,7 @@ public class AdminHome extends AppCompatActivity implements PopupMenu.OnMenuItem
                 finish();
             }
         });
-        cardView4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), AdminOffers.class);
-                startActivity(intent);
-                finish();
-            }
-        });
+
 
     }//Fin onCreate
 
@@ -367,10 +353,6 @@ public class AdminHome extends AppCompatActivity implements PopupMenu.OnMenuItem
         //Recrea la actividad
         recreate();
     }
-    public void ClickAgenda(View view){
-        //Redirecciona la activity a Agenda
-        redirectActivity(this, AdminAgenda.class);
-    }
     public void ClickClientes(View view){
         //Redirección de la activity Clientes
         redirectActivity(this,AdminUsers.class);
@@ -379,25 +361,13 @@ public class AdminHome extends AppCompatActivity implements PopupMenu.OnMenuItem
         //Redirección de la activity a Notificaciones
         redirectActivity(this,AdminNews.class);
     }
-    public void ClickPromo(View view){
-        //Redirección de la activity a Promociones
-        redirectActivity(this,AdminOffers.class);
+    public void ClickInvoices(View view){
+        //Redirección de la activity a Facturas
+        redirectActivity(this,AdminInvoices.class);
     }
-    public void ClickServicios(View view){
-        //Redirección de la activity a Servicios
-        redirectActivity(this,AdminServices.class);
-    }
-    public void CAbout(View view){
-        //Redirección de la activity a Nosotros
-        redirectActivity(this,AdminAboutUs.class);
-    }
-    public void ClickHealth(View view){
-        //Redirección de la activity a Salud y nutrición
-        redirectActivity(this,AdminHealth.class);
-    }
-    public void ClickMyProfile(View view){
-        //Redirección de la activity a Mi Perfil
-        redirectActivity(this,AdminProfile.class);
+    public void ClickMembership(View view){
+        //Redirección de la activity a Membresia
+        redirectActivity(this,AdminMembership.class);
     }
     public void ClickLogout(View view){
         //Close APP
@@ -419,7 +389,7 @@ public class AdminHome extends AppCompatActivity implements PopupMenu.OnMenuItem
                 //activity.finishAffinity();
                 //Salir de la APP
                 //System.exit(0);
-                Intent intent = new Intent(activity, MainActivity.class);
+                Intent intent = new Intent(activity, LogIn.class);
                 activity.startActivity(intent);
                 activity.finish();
             }
