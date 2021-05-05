@@ -238,10 +238,7 @@ public class AdminNews extends AppCompatActivity implements PopupMenu.OnMenuItem
         //Redirección de la activity a Membresia
         redirectActivity(this,AdminMembership.class);
     }
-    public void ClickMyProfile(View view){
-        //Redirección de la activity a Mi Perfil
-        redirectActivity(this,AdminProfile.class);
-    }
+
     /*Fin de los enlaces generales*/
 
     public void ClickLogout(View view){AdminHome.salir(this);}

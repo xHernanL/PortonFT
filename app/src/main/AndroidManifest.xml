@@ -55,7 +55,6 @@
         <activity android:name=".admin.AdminUsers" />
         <activity android:name=".admin.AdminAddUser" />
         <activity android:name=".admin.AdminNews" />
-        <activity android:name=".admin.AdminProfile" />
         <activity android:name=".admin.AdminHome" />
         <activity android:name=".admin.AdminInvoices" />
         <activity android:name=".admin.AdminMembership" />
