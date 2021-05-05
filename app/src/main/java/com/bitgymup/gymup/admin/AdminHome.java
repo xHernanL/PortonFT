@@ -94,10 +94,7 @@ public class AdminHome extends AppCompatActivity implements PopupMenu.OnMenuItem
         gimnasio_nombre  = (TextView) findViewById(R.id.gimnasio_nombre);
         String usuario_s = i.getStringExtra("usuario");
 
-
-
         username = getUserLogin("username");
-
 
         request = Volley.newRequestQueue(this);
         LoadAdminData(username);
